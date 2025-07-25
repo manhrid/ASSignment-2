@@ -1,3 +1,58 @@
+.trusted-left {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.trusted-left .main-image {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.trusted-left .badge {
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    width: 140px;
+    height: 140px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.trusted-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.trusted-right {
+    flex: 1;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.trusted-right h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.trusted-right ul {
+    list-style: disc inside;
+    color: #888;
+    font-size: 1.1rem;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.trusted-right ul li {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +64,7 @@ body {
     background-color: #f4f7ff;
     color: #333;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -44,6 +100,7 @@ nav .cart {
     font-size: 16px;
     color: #000;
 }
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -83,10 +140,6 @@ nav .cart {
     height: auto;
     border-radius: 15px;
 }
-
-.highlight {
-    color: #f26522;
-}
 .plants {
     padding: 60px;
     text-align: center;
@@ -105,7 +158,7 @@ nav .cart {
 
 .plant-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(4, 1fr);
     gap: 150px;
 }
 
@@ -150,5 +203,438 @@ nav .cart {
 
 .cart-btn:hover {
     background: linear-gradient(135deg, rgb(255, 2, 2), rgb(255, 204, 2));
-    transform: translateY(3px);
+  transform: translateY(3px);
+}
+.highlight{
+    color: #f26522;
+}
+
+.trusted-section {
+    padding: 60px;
+    background-color: #f4f7ff;
+}
+
+.trusted-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.trusted-left {
+   
+    flex: 1;
+    min-width: 300px;
+}
+
+.trusted-left .main-image {
+    width: 75%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    opacity: 0.95;
+}
+
+.trusted-left .badge {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.trusted-right {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    border-left: 3px solid #f26522;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-right: 40px;
+}
+
+.trusted-right h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #000;
+    font-family: 'YourFont', serif;
+}
+
+.trusted-right ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #666;
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.trusted-right ul li {
+    margin-bottom: 10px;
+}
+
+.deals-section {
+  background-color: #f1f4fc;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.deals-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.deals-title .highlight {
+  color: #f26522;
+  font-weight: bold;
+}
+
+.deals-description {
+  font-size: 25px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.deal-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.deal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.deal-card:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1; 
+}
+
+
+.deal-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.deal-text h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.deal-text a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.large-card {
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 768px) {
+  .deals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .large-card {
+    grid-row: auto;
+  }
+}
+
+.newsletter-section {
+  background-image: url('news-letter-bg.png'); 
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  min-height: 400px;
+  height: auto;
+}
+
+.newsletter-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.newsletter-content h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  font-size: 16px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+}
+
+.newsletter-form button {
+  background-color: #f26522;
+  color: white;
+  padding: 15px 30px;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: linear-gradient(135deg, rgb(255, 2, 2), rgb(255, 204, 2));
+}
+
+@media screen and (max-width: 600px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+.footer {
+  background-color: white;
+  padding: 60px 40px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  font-size: 16px;
+  min-height: 300px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 120px;
+    height: auto;
+  margin-bottom: 25px;
+}
+
+.footer-left p {
+  color: #555;
+  font-size: 20px;
+  max-width: 300px;
+}
+
+.footer-links {
+  display: flex;
+  flex: 2;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f26522;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .plants {
+    padding: 40px 20px;
+  }
+
+  .plants h2 {
+    font-size: 28px;
+  }
+
+  .plant-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .trusted-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .trusted-left,
+  .trusted-right {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .trusted-right {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .trusted-right h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .trusted-right ul {
+    font-size: 18px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .plant-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 28px;
+  }
+
+  .deals-title {
+    font-size: 28px;
+  }
+
+  .deals-description {
+    font-size: 18px;
+  }
+
+  .deal-text h3 {
+    font-size: 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
